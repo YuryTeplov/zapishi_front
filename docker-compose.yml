@@ -1,0 +1,12 @@
+version: '3'
+services:
+  # Service for the Nuxt.js application
+  nuxt-app:
+    build: .
+    ports:
+      - "3000:3000"
+    # Set environment variables if necessary
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/usr/src/app
