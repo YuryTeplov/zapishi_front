@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  routeRules: {
+    // Homepage pre-rendered at build time
+    '/**': { ssr: false },
+  },
+
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',

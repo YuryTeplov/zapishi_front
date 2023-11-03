@@ -1,12 +1,12 @@
 import { defineStore } from 'pinia'
 
-const baseUrl = 'API_URL'
+const baseUrl = 'http://35.236.166.134:443'
 
 export const useAuthStore = defineStore({
   id: 'auth',
   state: () => ({
     /* Initialize state from local storage to enable user to stay logged in */
-    user: JSON.parse(''),//JSON.parse(localStorage.getItem('user') ?? ''),
+    user: {},//JSON.parse(localStorage.getItem('user') ?? ''),
     token: null,//JSON.parse(localStorage.getItem('token') ?? ''),
   }),
   actions: {
@@ -17,6 +17,7 @@ export const useAuthStore = defineStore({
       })
         .then(response => {
           /* Update Pinia state */
+          console.log(response)
           this.user = response
           this.token = this.user.jwt_token
           /* Store user in local storage to keep them logged in between page refreshes */
@@ -33,3 +34,7 @@ export const useAuthStore = defineStore({
     }
   }
 })
+
+export function setupStore() {
+  return useAuthStore()
+}
