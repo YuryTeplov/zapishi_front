@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div class="max-w-md mx-auto bg-white rounded p-8 shadow-lg">
         <h2 class="text-2xl font-semibold mb-4">Личный кабинет</h2>
         
@@ -131,7 +132,6 @@ export default {
   },
 }
 </script>
-
 <script lang="ts" setup>
 
 definePageMeta({

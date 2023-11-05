@@ -160,6 +160,11 @@ export default {
 </script>
 
 <script lang="ts" setup>
+
+definePageMeta({
+  layout: false,
+});
+
 // Initialization for ES Users
 import {
   Input,
