@@ -147,18 +147,16 @@ export default {
     }
   },
   methods: {
-    login({$pinia}) {
+    async login() {
 
-      /*
-      const authStore = useAuthStore($pinia);
+      const authStore = useAuthStore();
 
-      authStore
+      await authStore
         .login(this.loginForm)
         .then((_response) => router.push("/"))
         .catch((error) => console.log("API error", error));
-        */
 
-      this.$router.push('/profile');
+      //this.$router.push('/profile');
 
 
     }

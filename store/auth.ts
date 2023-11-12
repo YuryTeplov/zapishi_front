@@ -1,17 +1,18 @@
 import { defineStore } from 'pinia'
 
-const baseUrl = 'http://35.236.166.134:443'
+const baseUrl = 'http://34.72.75.183:443/'
+
 
 export const useAuthStore = defineStore({
   id: 'auth',
   state: () => ({
     /* Initialize state from local storage to enable user to stay logged in */
-    user: {},//JSON.parse(localStorage.getItem('user') ?? ''),
-    token: null,//JSON.parse(localStorage.getItem('token') ?? ''),
+    user: {} as any,//JSON.parse(localStorage.getItem('user') ?? ''),
+    token: null as any,//JSON.parse(localStorage.getItem('token') ?? ''),
   }),
   actions: {
     async login(loginForm: any) {
-      await $fetch(`${baseUrl}/login`, {
+      await $fetch(`${baseUrl}/v1/auth`, {
         method: 'POST',
         body: loginForm
       })
@@ -32,6 +33,17 @@ export const useAuthStore = defineStore({
       localStorage.removeItem('user')
       localStorage.removeItem('token')
     }
+  }
+})
+
+export const useRegisterStore = defineStore({
+  id: 'register',
+  state: () => ({
+    email: '' as string,
+    password: '' as string,
+    code: '' as string,
+  }),
+  actions: {
   }
 })
 

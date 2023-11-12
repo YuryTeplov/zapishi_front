@@ -9,8 +9,10 @@
       data-te-sidenav-mode="side"
       data-te-sidenav-content="#content">
       <ul class="relative m-0 list-none px-[0.2rem]" data-te-sidenav-menu-ref>
+
         <li class="relative">
         </li>
+
         <li class="relative">
           <NuxtLink
             class="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-slate-50 hover:text-inherit hover:outline-none focus:bg-slate-50 focus:text-inherit focus:outline-none active:bg-slate-50 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
